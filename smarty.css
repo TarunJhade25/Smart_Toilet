@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    /* background: url(../smart_toi/background.jpg) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: goldenrod;
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 35px;
+    top: 20px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0px;
+    height: 3px;
+    background:black;
+    transition: .4s;
+}
+
+.navbar a:hover::before {
+    width: 103%;
+
+}
+
+.welltext{
+    margin: 190px ;
+    margin-top: 230px;
+    margin-bottom: 120px;
+    padding: 0px;
+    display: inherit;
+    text-align: center;
+
+}
+.location p{ 
+    text-align: center;
+    position: relative;
+    padding: 60px;
+    margin: 250px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    display:grid;
+    box-shadow: 0 0 17px 10px rgba(1, 0, 0, 0.342);
+    border-radius: 20px;
+    background:gainsboro;
+}
+.heading h1{
+    text-align: center;
+    color:black;
+    padding-top: 10%;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+.heading{
+    /* background-color: grey; */
+
+}
+
+.guidebox h1 {
+    text-align: center;
+    color: blac;
+    padding-top: 10%;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contactus h1 {
+    text-align: center;
+    color: blac;
+    padding-top: 10%;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+.contactus p {
+    /* font-size: 20px; */
+    text-align: center;
+    color: rgb(11, 11, 11);
+    padding-top: 1%;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.418);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+    font-weight: 500;
+    position: relative;
+}
