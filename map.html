@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+    <style>
+        h1{
+            /* text-align: center; */
+            position: relative;
+            padding: 30px;
+            /* margin: 250px; */
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            display:grid;
+            box-shadow: 0 0 17px 10px rgba(1, 0, 0, 0.342);
+            border-radius: 20px;
+            background:goldenrod;
+        }
+        #map {
+            display: flex;
+            height: 500px; 
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <main>
+        <h1>Find your nearest washroom location here</h1>
+        <div id="map"></div>
+    </main>
+
+    <script>
+
+        const map = L.map('map');
+        // Initializes map
+
+        map.setView([51.505, -0.09], 13);
+        // Sets initial coordinates and zoom level
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 20,
+            attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        // Sets map data source and associates with map
+
+        let marker, circle, zoomed;
+
+        navigator.geolocation.watchPosition(success, error);
+
+        const locationIcon = L.icon({
+                iconUrl: '../smart_toi/marker.png', // You can use an image or an icon library
+                iconSize: [70, 70], // Adjust the size of the icon as needed
+                iconAnchor: [32, 64], // The anchor point for the icon (adjust based on icon design)
+                popupAnchor: [0, -32] // The anchor point for the popup (adjust based on icon design)
+            });
+
+
+        function success(pos) {
+
+            const lat = pos.coords.latitude;
+            const lng = pos.coords.longitude;
+            const accuracy = pos.coords.accuracy;
+
+            if (marker) {
+                map.removeLayer(marker);
+                map.removeLayer(circle);
+            }
+            // Removes any existing marker and circule (new ones about to be set)
+
+            marker = L.marker([lat, lng], { icon: locationIcon }).addTo(map);
+            circle = L.circle([lat, lng], { radius: 20 }).addTo(map);
+            // Adds marker to the map and a circle for accuracy
+
+            if (!zoomed) {
+                zoomed = map.fitBounds(circle.getBounds());
+            }
+            // Set zoom to boundaries of accuracy circle
+
+            map.setView([lat, lng]);
+            // Set map focus to current user position
+
+        }
+
+        function error(err) {
+
+            if (err.code === 1) {
+                alert("Please allow geolocation access");
+            } else {
+                alert("Cannot get current location");
+            }
+
+        }
+
+        const extraMarkers = [
+                { lat: 23.251894, lng: 77.485532, title: 'Marker 1', description: 'This is Marker 1' },
+                { lat: 23.248918, lng: 77.471518, title: 'Marker 2', description: 'This is Marker 2' },
+                { lat: 23.251518, lng: 77.464327, title: 'Marker 3', description: 'This is Marker 3' },
+                { lat: 23.251154, lng: 77.522692, title: 'Marker 3', description: 'This is Marker 3' }
+            ];
+
+            extraMarkers.forEach(markerInfo => {
+                const marker = L.marker([markerInfo.lat, markerInfo.lng])
+                    .addTo(map)
+                    .bindPopup(`<h3>${markerInfo.title}</h3><p>${markerInfo.description}</p>`);
+            });
+
+    </script>
+
+</body>
+
+</html>
