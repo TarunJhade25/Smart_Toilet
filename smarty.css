@@ -52,7 +52,7 @@ body {
     left: 0;
     width: 0px;
     height: 3px;
-    background:black;
+    background: black;
     transition: .4s;
 }
 
@@ -61,47 +61,105 @@ body {
 
 }
 
-.welltext{
-    margin: 190px ;
+.welltext {
+    margin: 190px;
     margin-top: 230px;
     margin-bottom: 120px;
-    padding: 0px;
+    padding-bottom: 0px;
     display: inherit;
     text-align: center;
 
 }
-.location p{ 
+
+.location p {
     text-align: center;
     position: relative;
     padding: 60px;
     margin: 250px;
     margin-top: 0;
     margin-bottom: 80px;
-    display:grid;
+    display: grid;
     box-shadow: 0 0 17px 10px rgba(1, 0, 0, 0.342);
     border-radius: 20px;
-    background:gainsboro;
+    background: gainsboro;
 }
-.heading h1{
+
+.heading h1 {
     text-align: center;
-    color:black;
-    padding-top: 10%;
+    color: black;
+    padding-top: 25%;
     margin-bottom: 30px;
     font-weight: 600;
     position: relative;
 }
-.heading{
-    /* background-color: grey; */
+
+.heading p {
+    padding-left: 15px;
+    padding-right: 10px;
+    display: grid;
+    font-size: 18px;
+    text-align: justify;
+    ;
+}
+
+.images1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.images1 img {
+    width: 320px;
+    height: 250px;
 
 }
 
 .guidebox h1 {
     text-align: center;
-    color: blac;
-    padding-top: 10%;
+    color: black;
+    padding-top: 25%;
     margin-bottom: 30px;
     font-weight: 600;
     position: relative;
+}
+
+.guidebox p {
+    padding-left: 15px;
+    padding-right: 10px;
+    display: grid;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.guidebox img {
+    display: block;
+    position: relative;
+    /* padding: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+
+}
+
+.saftybox h1 {
+    text-align: center;
+    color: black;
+    padding-top: 5%;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.saftybox p {
+    padding-left: 15px;
+    padding-right: 10px;
+    display: grid;
+    font-size: 18px;
+    text-align: justify;
 }
 
 .contactus h1 {
@@ -112,6 +170,7 @@ body {
     font-weight: 600;
     position: relative;
 }
+
 .contactus p {
     /* font-size: 20px; */
     text-align: center;
