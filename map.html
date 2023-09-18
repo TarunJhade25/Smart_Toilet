@@ -84,7 +84,7 @@
             // Removes any existing marker and circule (new ones about to be set)
 
             marker = L.marker([lat, lng], { icon: locationIcon }).addTo(map);
-            circle = L.circle([lat, lng], { radius: 20 }).addTo(map);
+            circle = L.circle([lat, lng], { radius: 50 }).addTo(map);
             // Adds marker to the map and a circle for accuracy
 
             if (!zoomed) {
@@ -108,14 +108,21 @@
         }
 
         const extraMarkers = [
-                { lat: 23.251894, lng: 77.485532, title: 'Marker 1', description: 'This is Marker 1' },
-                { lat: 23.248918, lng: 77.471518, title: 'Marker 2', description: 'This is Marker 2' },
-                { lat: 23.251518, lng: 77.464327, title: 'Marker 3', description: 'This is Marker 3' },
-                { lat: 23.251154, lng: 77.522692, title: 'Marker 3', description: 'This is Marker 3' }
-            ];
+                { lat: 23.251894, lng: 77.485532, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.248918, lng: 77.471518, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.250490, lng: 77.526224, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.251154, lng: 77.522692, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.250745, lng: 77.524923, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.251429, lng: 77.524323, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.251518, lng: 77.464327, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.250264, lng: 77.523208, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.250584, lng: 77.523771, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.249122, lng: 77.525444, title: 'Smart Sawchalaye', description: 'Smart Toilet' },
+                { lat: 23.249339, lng: 77.528373, title: 'Smart Sawchalaye', description: 'Smart Toilet' }
+                ];
 
             extraMarkers.forEach(markerInfo => {
-                const marker = L.marker([markerInfo.lat, markerInfo.lng])
+                const marker = L.marker([markerInfo.lat, markerInfo.lng])Smart
                     .addTo(map)
                     .bindPopup(`<h3>${markerInfo.title}</h3><p>${markerInfo.description}</p>`);
             });
