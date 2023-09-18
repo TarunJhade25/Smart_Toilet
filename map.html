@@ -123,8 +123,8 @@
 
             extraMarkers.forEach(markerInfo => {
                 const marker = L.marker([markerInfo.lat, markerInfo.lng])
-                    Smart.addTo(map)
-                        .bindPopup(`<h3>${markerInfo.title}</h3><p>${markerInfo.description}</p>`);
+                    .addTo(map)
+                    .bindPopup(`<h3>${markerInfo.title}</h3><p>${markerInfo.description}</p>`);
             });
 
     </script>
