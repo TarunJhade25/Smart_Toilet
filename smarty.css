@@ -189,19 +189,19 @@ body {
     margin: 30px;
     box-decoration-break:10px rgba(1, 0, 0, 0.852);
     border-radius: 20px;
-    background:rgb(94, 82, 53);
+    background:rgb(198, 193, 180);
     
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.418);
+    background: rgba(7, 7, 7, 0.456);
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
     height: auto;
     font-size: 20px;
     text-align: center;
-    color: rgb(8, 8, 8);
+    color: rgb(255, 254, 254);
     font-weight: 500;
     position: relative;
 }
