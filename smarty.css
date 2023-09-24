@@ -206,6 +206,86 @@ body {
     position: relative;
 }
 
+@media screen and (max-width: 375px) {
+    .header {
+        padding: 15px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 10px;
+        margin-left: 30px;
+        margin-top: 0px;
+        display: grid;
+    }
+
+    .welltext {
+        margin-top: 200px;
+        /* Adjust the margin for smaller screens */
+        padding: 20px;
+        /* Add padding for better spacing */
+    }
+
+    .location p {
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .heading h1 {
+        font-size: 24px; /* Increase the font size for better readability on small screens */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .images1 img {
+        width: 94%;
+        height: auto;
+    }
+
+    .guidebox h1,
+    .saftybox h1 {
+        font-size: 24px; /* Increase the font size for better readability on small screens */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .guidebox img {
+        width: 80%; /* Adjust image width for better display on small screens */
+    }
+
+    .saftybox ul {
+        font-size: 16px; /* Adjust the font size for better readability on small screens */
+        margin: 15px; /* Adjust margin for better spacing */
+    }
+
+    .contactus h1 {
+        font-size: 24px; /* Increase the font size for better readability on small screens */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .contactus p {
+        font-size: 16px; /* Adjust the font size for better readability on small screens */
+        margin-bottom: 10px; /* Adjust margin for better spacing */
+    }
+
+    .contactus section {
+        padding: 20px; /* Adjust the padding for better spacing on small screens */
+    }
+
+    .footer {
+        font-size: 16px; /* Adjust the font size for better readability on small screens */
+    }
+
+}
+
 
 
  
